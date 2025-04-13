@@ -41,6 +41,23 @@ void calcularBaskara (float a, float b, float c)
   }
   }
 
+  void conversaoTempo (int tempoemSegundos)
+  {
+    int segundos = 0;
+    int segundosResto = 0;
+    int minutos = 0;
+    int minutosResto = 0;
+    int horas = 0;
+    int horasResto = 0;
+    
+    minutos = tempoemSegundos / 60;
+    minutosResto = minutos % 60;
+    horas = minutos / 60;
+    horasResto = minutos % 60;
+    segundosResto = tempoemSegundos % 60;
+    
+  printf("eis o valor em HH:MM:SS:\n %dh:%dm:%ds",horas, minutosResto, segundosResto);
+  }
 
   
 

@@ -9,6 +9,23 @@ int main()
 
   while(sair == 1)
   {
+    printf("Escolha uma opcao com o teclado numerico para o programa ser executado: \n");
+    printf("1 - Funcao imprimir OI\n");
+    printf("2 - Funcao imprimir texto\n");
+    printf("3 - Funcao imprimir texto\n");
+    printf("4 - Calculo formula de Baskara\n");
+    printf("5 - Conversao de segundos para o padrao (HH:MM:SS)\n");
+    printf("6 - \n");
+    printf("7 - \n");
+    printf("8 - \n");
+    printf("9 - \n");
+    printf("10 - \n");
+    printf("11 - \n");
+    printf("12 - \n");
+    printf("13 - \n");
+    printf("14 - \n");
+    printf("15 - \n");
+    
     scanf("%d",&menu);
     switch (menu)
     {
@@ -41,7 +58,10 @@ int main()
         calcularBaskara(a, b, c);
       break;
       case 5:
-        cinco
+        int tempo = 0;
+        printf("digite o valor do tempo em segundos: \n");
+        scanf("%d",&tempo);
+        conversaoTempo(tempo);
       break;
       default:
       break;
