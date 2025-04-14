@@ -133,13 +133,24 @@ int main()
       verificarExistenciaTriangulo(lado_a, lado_b, lado_c);
       break;
 
-      case 14:
-      
+      case 14:  
+      int n;
+      printf("insira um valor para n:\n");
+      scanf("%d", &n);
+      int mediaN = mediaNnumeros(n);
+      printf("Media = %d\n", mediaN);
       break;
 
       case 15:
-      
+      int base, expoente;
+      printf("\nDigite um valor para x: ");
+      scanf("%d", &base);
+      printf("\nDigite um valor para y: ");
+      scanf("%d", &expoente);
+      int potencia =  calcular_potencia(base, expoente);
+      printf("\nBase %d elevado a %d = %d \n", base, expoente, potencia);
       break;
+      
       default:
       printf("Por obsequio digite uma opcao valida!\n");
       break;

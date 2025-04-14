@@ -223,9 +223,31 @@ void calcularBaskara (float a, float b, float c)
     }
 }
 
-float mediaNnumeros (float Nnumeros)
+int mediaNnumeros (int n)
 {
-  
+ int vet[9999];
+  int media = 0;
+  int soma = 0;
 
+  for(int i = 0; i < n; i++)
+  {
+    printf("Digite um numero:\n");
+    scanf("%d", &vet[i]);
+  }
+  for(int i = 0; i < n; i++)
+  {
+    soma += vet[i];
+  }
+  media = soma / n;
+  return media;
+}
 
+int calcular_potencia (int x, int y) 
+{
+  int potencia = 1;	
+  for(int i = 0; i < y; i++)
+  {
+    potencia = potencia * x;
+  }
+  return potencia;
 }
