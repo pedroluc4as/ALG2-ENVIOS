@@ -15,16 +15,16 @@ int main()
     printf("3 - Funcao imprimir texto\n");
     printf("4 - Calculo formula de Baskara\n");
     printf("5 - Conversao de segundos para o padrao (HH:MM:SS)\n");
-    printf("6 - \n");
-    printf("7 - \n");
-    printf("8 - \n");
-    printf("9 - \n");
-    printf("10 - \n");
-    printf("11 - \n");
-    printf("12 - \n");
-    printf("13 - \n");
-    printf("14 - \n");
-    printf("15 - \n");
+    printf("6 - Conversao anos de vida para dias de vida\n");
+    printf("7 - Verificar se um valor e perfeito\n");
+    printf("8 - Identificar a categoria do nadador por meio de sua idade\n");
+    printf("9 - Verificar se um valor inteiro e positivo ou negativo\n");
+    printf("10 - Verificar se um valor inteiro e par ou impar\n");
+    printf("11 - Verificar a qual conceito o aluno se encaixa atraves da media de suas notas\n");
+    printf("12 - Imprimir tres valores inteiros em ordem crescente\n");
+    printf("13 - Identificar o tipo do triangulo\n");
+    printf("14 - Media de valores positivos\n");
+    printf("15 - Transformar X e Z em potencia e calcular\n");
     
     scanf("%d",&menu);
     switch (menu)
@@ -63,7 +63,85 @@ int main()
         scanf("%d",&tempo);
         conversaoTempo(tempo);
       break;
+      case 6:
+        int diasVida = 0;
+        int anos = 0;
+        int meses = 0;
+        int dias = 0;
+
+        printf("digite sua idade:\n");
+        printf("Anos:\n");
+        scanf("%d",&anos);
+        printf("Meses:\n");
+        scanf("%d",&meses);
+        printf("Dias:\n");
+        scanf("%d",&dias);
+        calculoDiasdeVida(anos, meses, dias);
+      break;
+
+      case 7:
+      //valorPerfeito(valor);
+      break;
+
+      case 8:
+      int idade;
+      idadeCategoriaNadador(idade);
+      break;
+
+      case 9:
+      int valor;
+      printf("insira um valor inteiro:\n");
+      scanf("%d", &valor);
+      valor = verificarValorPositivoNegativo(valor);
+      printf("%d",valor);
+      break;
+
+      case 10:
+      int numero = 0;
+      printf("insira um valor inteiro:\n");
+      scanf("%d", &numero);
+      numero = verificarValorParImpar(numero);
+      printf("%d",numero);
+      break;
+
+      case 11:
+      float media;
+      printf("insira a media final do aluno:\n");
+      scanf("%f", &media);
+      char conceito = mediaConceitoAluno(media);
+      printf("estudante conceito %c",conceito);
+      break;
+
+      case 12:
+      int valor1[3];
+      printf("insira tres valores:\n");
+      for(int i = 0; i < 3; i++)
+      {
+        scanf("%d", &valor1[i]);
+      }
+      ordemCrescente(valor1);
+      break;
+
+      case 13:
+      int lado_a, lado_b, lado_c;
+      printf("DIGITE UM VALOR a: \n");
+      scanf("%d",&lado_a);
+      printf("DIGITE UM VALOR b: \n");
+      scanf("%d",&lado_b);
+      printf("DIGITE UM VALOR c: \n");
+      scanf("%d",&lado_c);
+      verificarExistenciaTriangulo(lado_a, lado_b, lado_c);
+      break;
+
+      case 14:
+      
+      break;
+
+      case 15:
+      
+      break;
       default:
+      printf("Por obsequio digite uma opcao valida!\n");
       break;
     }
 
