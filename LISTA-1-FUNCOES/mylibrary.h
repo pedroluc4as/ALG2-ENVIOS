@@ -221,5 +221,11 @@ void calcularBaskara (float a, float b, float c)
     {
       printf("TRIANGULO INEXISTENTE!");
     }
-    
+}
+
+float mediaNnumeros (float Nnumeros)
+{
+  
+
+
 }
