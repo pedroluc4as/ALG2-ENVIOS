@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "mylibrary.h"
+#include <stdbool.h>
 
 int main()
 {
@@ -80,7 +81,11 @@ int main()
       break;
 
       case 7:
-      //valorPerfeito(valor);
+      int numero;
+      printf("Digite um valor:\n");
+      scanf("%d", &numero);
+      bool verdadeiro_falso = numeroPerfeito(numero);
+      printf("\n %d \n", verdadeiro_falso);
       break;
 
       case 8:
@@ -97,11 +102,11 @@ int main()
       break;
 
       case 10:
-      int numero = 0;
+      int numero1 = 0;
       printf("insira um valor inteiro:\n");
-      scanf("%d", &numero);
-      numero = verificarValorParImpar(numero);
-      printf("%d",numero);
+      scanf("%d", &numero1);
+      numero1 = verificarValorParImpar(numero1);
+      printf("%d",numero1);
       break;
 
       case 11:
@@ -150,7 +155,7 @@ int main()
       int potencia =  calcular_potencia(base, expoente);
       printf("\nBase %d elevado a %d = %d \n", base, expoente, potencia);
       break;
-      
+
       default:
       printf("Por obsequio digite uma opcao valida!\n");
       break;
@@ -162,4 +167,5 @@ int main()
   }
 
   return 0;
+    
 }

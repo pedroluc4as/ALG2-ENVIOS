@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
 //printf OI
 void oi()
 {
@@ -80,12 +81,20 @@ void calcularBaskara (float a, float b, float c)
   return diasVida;
   }
 
-  int valorPerfeito (int valor)
+bool numeroPerfeito (int valor) 
+{
+  int soma_divisores = 0;
+  int i = 0;
+  for(int j = 1; j < valor; j++)
   {
-    int verdadeiroFalso = 0;
-  
-  return verdadeiroFalso;
+    if(valor % j == 0)
+    {
+      printf("\n j = %d", j);
+      soma_divisores += j;
+    }
+    i++;
   }
+}
 
   int idadeCategoriaNadador (int idade)
   {
@@ -221,7 +230,8 @@ void calcularBaskara (float a, float b, float c)
     {
       printf("TRIANGULO INEXISTENTE!");
     }
-}
+  }
+
 
 int mediaNnumeros (int n)
 {
@@ -251,3 +261,4 @@ int calcular_potencia (int x, int y)
   }
   return potencia;
 }
+
