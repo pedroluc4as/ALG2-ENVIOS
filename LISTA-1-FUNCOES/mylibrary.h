@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
-//printf OI
+
 void oi()
 {
   printf("OI\n");
 }
 
-//printf
 void printmsg(char msg[50])
 {
   printf("%s", msg);
