@@ -1,0 +1,19 @@
+///AULA SOBRE ARQUIVO///
+
+FILE *arquivo;
+
+Criar um arquivo = "w" 
+a letra "w" significa write (escrita/escrever)
+
+Ler um arquivo = "r"
+a letra "r" significa read (ler)
+
+a letra "a" significa anexar
+-----------------------------------------------------------------------------------------------------
+Se é preciso usar mais de uma função das três (3) mencionadas acima, podemos utilizar o caracter "+"
+-----------------------------------------------------------------------------------------------------
+Para abrir o arquivo se utiliza
+arquivo = fopen(url, "w");
+url = local onde esta o arquivo, incluindo o nome e a extensao do arquivo
+"w" o que eu quero fazer, se e write, read ou anexar
+-----------------------------------------------------------------------------------------------------
