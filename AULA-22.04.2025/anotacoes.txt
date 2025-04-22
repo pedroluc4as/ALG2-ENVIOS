@@ -17,3 +17,4 @@ arquivo = fopen(url, "w");
 url = local onde esta o arquivo, incluindo o nome e a extensao do arquivo
 "w" o que eu quero fazer, se e write, read ou anexar
 -----------------------------------------------------------------------------------------------------
+ESTUDAR ARQUIVO CSV!
