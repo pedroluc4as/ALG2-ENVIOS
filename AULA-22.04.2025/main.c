@@ -8,18 +8,21 @@ int main()
 
   arquivo = fopen(url, "w");
 
-  fprintf(arquivo, "*\n");
-  fprintf(arquivo, "**\n");
-  fprintf(arquivo, "***\n");
-  fprintf(arquivo, "****\n");
-  fprintf(arquivo, "*****\n");
-  fprintf(arquivo, "******\n");
-  fprintf(arquivo, "*******\n");
-  fprintf(arquivo, "********\n");
-  fprintf(arquivo, "*********\n");
-  fprintf(arquivo, "**********");
-  
+  if(arquivo == NULL)
+  {
+    printf("ERROR, VERIFY PERMISSIONS AND STORAGE AFTER TRY AGAIN");
+  }
+  if(arquivo != NULL)
+  {
+    fprintf(arquivo, "*\n");
+    fprintf(arquivo, "**\n");
+    fprintf(arquivo, "***\n");
+    fprintf(arquivo, "****\n");
+    fprintf(arquivo, "*****\n");
+    fprintf(arquivo, "******");
+
   fclose(arquivo);
 
-return 0;
+  }
+  return 0;
 }
