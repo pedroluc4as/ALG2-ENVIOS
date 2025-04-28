@@ -1,0 +1,1 @@
+Num_doc,  Valor_doc,  Data_Emissao,  Data_Vencimento, Cod_Cli
