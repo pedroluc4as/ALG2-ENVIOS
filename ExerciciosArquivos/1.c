@@ -6,7 +6,6 @@ int main(){
   FILE *recebimentos;
 
   char *url = "clientes.txt";
-
   char *url1 = "recebimentos.txt";
 
   clientes = fopen(url, "w");
@@ -15,7 +14,6 @@ int main(){
     return 0;
     }
   fprintf(clientes, "Cod_Cli, Nome, Endereco, Fone");
-
   fclose(clientes);
 
   recebimentos = fopen(url1, "w");
