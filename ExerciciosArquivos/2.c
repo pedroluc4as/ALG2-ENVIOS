@@ -21,6 +21,10 @@ int main(){
 
 
   clientes = fopen(url, "a");
+    if(clientes == NULL){
+      printf("Erro ao abrir o arquivo");
+    return 0;
+    }
   fprintf(clientes, "\n%d, %s, %s, %d", Cod_Cli, Nome, Endereco, Fone);
   fclose(clientes);
 
