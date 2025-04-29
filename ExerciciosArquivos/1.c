@@ -10,6 +10,10 @@ int main(){
   char *url1 = "recebimentos.txt";
 
   clientes = fopen(url, "w");
+    if (clientes == NULL && recebimentos == NULL) {
+      printf("Erro ao abrir o arquivo");
+    return 0;
+    }
   fprintf(clientes, "Cod_Cli, Nome, Endereco, Fone");
 
   fclose(clientes);
