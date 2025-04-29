@@ -11,6 +11,7 @@ int main(){
 
   clientes = fopen(url, "w");
   fprintf(clientes, "Cod_Cli, Nome, Endereco, Fone");
+
   fclose(clientes);
 
   recebimentos = fopen(url1, "w");

@@ -1,1 +1,3 @@
 Cod_Cli, Nome, Endereco, Fone
+1, Pedro, Rua, 1
+2, Lucas, Avenida, 2
