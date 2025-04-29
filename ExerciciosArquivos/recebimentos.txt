@@ -1,2 +1,4 @@
 Num_doc,  Valor_doc,  Data_Emissao,  Data_Vencimento, Cod_Cli
-1, 0, , 1011020100, 4
+
+1, 1999872, , 21/10/2025, 130
+2, 1999872, , 31/05/1977, 132
