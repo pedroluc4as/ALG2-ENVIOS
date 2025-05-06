@@ -1,72 +1,83 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>  
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-#define LINHAS 5
-#define COLUNAS 5
-
-int main(){
-
-  FILE *csv;
-  char *url = "csv.csv";
-
-  int entrada [LINHAS][COLUNAS];
-  int janela [LINHAS][COLUNAS];
-  float saidaMedia [LINHAS] [COLUNAS];  
-
+#define LINHAS 10
+#define COLUNAS 10
+// GERAR MATRIZ COM VALORES ALEATORIOS
+void gerarMatriz(int matriz[LINHAS][COLUNAS])
+{
   srand(time(NULL));
-
-  for(int i = 0; i < LINHAS; i++){
-    for(int j = 0; j < COLUNAS; j++){
-    entrada[i][j] = rand() % 256;
-    janela[i][j] = rand() % 256;
-    }
-  }
-
-  for(int i = 0; i < LINHAS; i++){
-    for(int j = 0; j < COLUNAS; j++){
-      saidaMedia[i][j] = entrada[i][j] + janela[i][j] / 2.0;
-    }
-  }
-
-  for(int i = 0; i < LINHAS; i++){
-    for(int j = 0; j < COLUNAS; j++){
-      printf(" [%3d] ",entrada[i][j]);
-    }
-    printf("\n");
-  }
-
-  for(int i =0; LINHAS < 5; i++)
+  printf("MATRIZ DE ENTRADA ALEATORIA:\n");
+  for (int i = 0; i < LINHAS; i++)
   {
-    for(int j = 0; COLUNAS < 5; j++)
+    for (int j = 0; j < COLUNAS; j++)
     {
-      if(((i - 2 >= 0 && i + 2 <= 4) && (j - 2 >= 0 j + 2 <= 4)) && ((i - 2 >=0  && j - 2 >= 0) && (i + 2 <= 4 && j + 2 <= 4)))
+      matriz[i][j] = rand() % 256;
+      printf("[%3d]", matriz[i][j]);
+    }
+    printf("\n");
+  }
+  printf("VEJA A MATRIZ MEDIA NO ARQUIVO CSV\n");
+}
+// ZERA A MATRIZ INTEIRA E DEPOIS PREENCHE SOMENTE O TAMANHO DA MATRIZ DEIXANDO OS EXTREMOS (BORDAS) COM ZERO
+void aplicarFiltro(int entrada[LINHAS][COLUNAS], int saida[LINHAS][COLUNAS])
+{
+  int matriz[LINHAS][COLUNAS];
+
+  for (int i = 0; i < LINHAS; i++)
+  {
+    for (int j = 0; j < COLUNAS; j++)
+    {
+      saida[i][j] = 0;
+    }
+  }
+  for (int i = 2; i < LINHAS - 2; i++)
+  {
+    for (int j = 2; j < COLUNAS - 2; j++)
+    {
+      int soma = 0;
+
+      for (int x = -2; x <= 2; x++)
       {
-          
+        for (int y = -2; y <= 2; y++)
+        {
+          soma = soma + entrada[i + x][j + y];
+        }
       }
+        saida[i][j] = soma / 25.0;
     }
   }
+}
 
-  for(int i = 0; i < LINHAS; i++){
-    for(int j = 0; j < COLUNAS; j++){
-      //printf("%d",janela[i][j]);
-    }
-    printf("\n");
+void salvarCSV(int matriz[LINHAS][COLUNAS], char *nome_arquivo)
+{
+  FILE *arquivo;
+  arquivo = fopen(nome_arquivo,"a+");
+
+  if(arquivo == NULL)
+  {
+    printf("Erro ao abrir arquivo!\n");
+    return;
   }
-
-  for(int i = 0; i < LINHAS; i++){
-    for(int j = 0; j < COLUNAS; j++){
-      //printf("%d",saidaMedia[i][j]);
+  for (int i = 0; i < LINHAS; i++)
+  {
+    for (int j = 0; j < COLUNAS; j++)
+    {
+      fprintf(arquivo,"[%3d]", matriz[i][j]);
     }
-    printf("\n");
+    fprintf(arquivo, "\n");
   }
+  fclose(arquivo);
+}
+int main()
+{
+  int entrada[LINHAS][COLUNAS];
+  int saida[LINHAS][COLUNAS];
 
-for(int i = 0; i < LINHAS; i++){
-    for(int j = 0; j < COLUNAS; j++){
-      //printf(" %d ",saidaMedia[i][j]);
-    }
-    printf("\n");
-  }
+  gerarMatriz(entrada);
+  aplicarFiltro(entrada, saida);
+  salvarCSV(saida, "nome_arquivo.csv");
 
-return 0;
+  return 0;
 }
