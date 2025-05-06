@@ -35,6 +35,8 @@ int main(){
     return 0;
     }
   fprintf(recebimentos, "\n%d, %d, %s, %s, %d", Num_doc, Valor_doc, Data_Emissao, Data_Vencimento, Cod_Cli);
+  fscanf((recebimentos, "\n%d, %d, %s, %s, %d", Num_doc, Valor_doc, Data_Emissao, Data_Vencimento, Cod_Cli);
+
   fclose(recebimentos);
   
   clientes = fopen(url, "r");
