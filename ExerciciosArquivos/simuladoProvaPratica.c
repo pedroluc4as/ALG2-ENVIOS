@@ -53,7 +53,7 @@ void aplicarFiltro(int entrada[LINHAS][COLUNAS], int saida[LINHAS][COLUNAS])
 void salvarCSV(int matriz[LINHAS][COLUNAS], char *nome_arquivo)
 {
   FILE *arquivo;
-  arquivo = fopen(nome_arquivo,"a+");
+  arquivo = fopen(nome_arquivo,"w");
 
   if(arquivo == NULL)
   {
