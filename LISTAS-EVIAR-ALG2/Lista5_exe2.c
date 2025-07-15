@@ -18,5 +18,5 @@ int main(){
    else{
     printf("Variavel v2 = %d tem o maior endereço %p\n",v2, (void*)ptr2);
    }
-return 0;
+return 0; 
 }

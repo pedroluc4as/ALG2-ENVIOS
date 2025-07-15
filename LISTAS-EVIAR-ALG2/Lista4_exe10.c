@@ -16,7 +16,7 @@ int main()
 {
   struct Atleta a[5];
   for (int i = 0; i < 5; i++)
-  {
+  { 
     printf("Digite nome, esporte, idade e altura do atleta %d:\n", i + 1);
     scanf("%s %s %d %f", a[i].nome, a[i].esporte, &a[i].idade, &a[i].altura);
   }

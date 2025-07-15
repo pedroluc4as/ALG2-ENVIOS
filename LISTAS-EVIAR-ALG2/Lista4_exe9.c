@@ -12,7 +12,7 @@ struct Atleta
   int idade;
   float altura;
 };
-
+ 
 int main(){
   struct Atleta a[5];
   for(int i = 0; i < 5; i++){

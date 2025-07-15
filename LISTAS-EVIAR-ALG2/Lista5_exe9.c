@@ -11,7 +11,7 @@ void imprimeVetor(int *vet, int tamanho){
 int main(){
   int vet[5] = {100, 250, 31, 48, 55};
   int tamanho = 5;
-
+ 
   imprimeVetor(vet, tamanho);
 
   return 0;
