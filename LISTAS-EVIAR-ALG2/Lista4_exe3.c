@@ -10,7 +10,6 @@ struct pontoPlano
   double posX;
   double posY;
 };
-
 int main() {
 
 struct pontoPlano p1, p2;
