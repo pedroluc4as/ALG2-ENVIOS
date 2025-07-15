@@ -7,7 +7,7 @@ void imprimeVetor(int *vet, int tamanho){
   }
   printf("\n");
 }
-
+ 
 int main(){
   int vet[5] = {100, 250, 31, 48, 55};
   int tamanho = 5;

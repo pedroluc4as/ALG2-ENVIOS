@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+ 
 int main(){
   FILE *estilistas, *roupas, *estacoes;
   char *url_estilistas = "estilistas.txt";

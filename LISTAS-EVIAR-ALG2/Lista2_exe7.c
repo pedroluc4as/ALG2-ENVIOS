@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-
+ 
 int bissexto(int ano){
   if((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)){
     return 1;

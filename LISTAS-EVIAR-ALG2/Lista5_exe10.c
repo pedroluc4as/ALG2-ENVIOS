@@ -3,7 +3,7 @@
 
 int main(){
   int a, *b, **c, ***d;
-
+ 
   printf("Digite um valor inteiro:\n");
   scanf("%d",&a);
 

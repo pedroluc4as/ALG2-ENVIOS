@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-
+ 
   FILE *clientes;
 
   char *url = "clientes.txt";

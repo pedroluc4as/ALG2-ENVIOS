@@ -14,7 +14,7 @@ int main(){
   int vetor[5];
   int tamanhoDoVetor = 5;
   int valor = 10;
-
+ 
   printf("Chamando a funcao para preencher o vetor com o valor %d...\n\n", valor);
   preencheVet(vetor, tamanhoDoVetor, valor);
   

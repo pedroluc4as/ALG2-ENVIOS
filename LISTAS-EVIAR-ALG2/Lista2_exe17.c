@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+ 
 int main(){
   FILE *produtos;
   char *url_produtos = "PRODUTOS.txt";
