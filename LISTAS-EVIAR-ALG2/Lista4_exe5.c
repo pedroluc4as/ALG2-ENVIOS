@@ -28,7 +28,6 @@ int main() {
     printf("digite as coordenadas do ponto a ser testado (x y): \n");
     scanf("%lf %lf", &p.posX, &p.posY);
 
-  
     if(p.posX >= ret.supEsq.posX && p.posX <= ret.infDir.posX && p.posY >= ret.infDir.posY && p.posY <= ret.supEsq.posY) {
         printf("o ponto esta dentro do retangulo.\n");
     } 
